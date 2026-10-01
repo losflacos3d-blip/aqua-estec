@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedir Agua y Contacto Comercial - AQUA ESTEC</title>
+  <meta name="description" content="Solicita agua mineral o pide presupuesto para tu hogar o empresa en Vall d’Uixó y comarcas. Formulario rápido sin compromiso.">
+  <link rel="stylesheet" href="css/estilos.css?v=2.3">
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <aside class="banner-prototipo" aria-label="Aviso de prototipo">
+    ⚙️ <strong>PROTOTIPO LOCAL DE EVALUACIÓN:</strong> Este formulario no envía datos al exterior. Es una prueba técnica local.
+  </aside>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="contacto-rapido">
+        <span>Canales directos:</span>
+        <span class="badge-pendiente">⏳ WhatsApp: [Pendiente de confirmación]</span>
+        <span class="badge-pendiente">⏳ Teléfono: [Pendiente de confirmación]</span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--color-primary-light); font-weight: 700;">
+        📍 Cobertura prioritaria: Vall d’Uixó
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="AQUA ESTEC - Inicio">
+        <img src="assets/logo-aqua-estec.png" alt="AQUA ESTEC" style="height: 28px; width: auto; object-fit: contain; display: block;">
+        <span class="brand-tagline" style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase; border-left: 1px solid #cbd5e1; padding-left: 8px; margin-left: 2px;">Desde 1970</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-navegacion" aria-label="Abrir o cerrar menú de navegación">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+
+      <nav id="menu-navegacion" class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="hogares.html" class="nav-link">Hogares</a></li>
+          <li><a href="empresas.html" class="nav-link">Empresas</a></li>
+          <li><a href="aguas-formatos.html" class="nav-link">Aguas y formatos</a></li>
+          <li><a href="dispensadores.html" class="nav-link">Dispensadores</a></li>
+          <li><a href="zonas-reparto.html" class="nav-link">Zonas de reparto</a></li>
+          <li><a href="historia.html" class="nav-link">Nuestra historia</a></li>
+          <li><a href="pedir-agua.html" class="nav-link nav-cta active" aria-current="page">Pedir agua</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="section section-alt" style="padding-top: 36px; padding-bottom: 24px;">
+      <div class="container" style="max-width: 720px; text-align: center;">
+        <span class="section-kicker">Atención directa</span>
+        <h1 class="section-title">Solicitar agua mineral o presupuesto</h1>
+        <p class="section-subtitle">
+          Indícanos tu teléfono, código postal y consumo aproximado. Te informaremos de la ruta más conveniente sin compromiso.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 720px;">
+
+        <div class="form-card">
+          <form id="form-pedir-agua" novalidate aria-describedby="form-disclaimer">
+            
+            <!-- Paso 1: Código Postal con verificación inmediata de ruta -->
+            <div class="form-group">
+              <label for="codigo-postal" class="form-label">
+                1. Código postal de entrega <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+              </label>
+              <div class="cp-input-wrap" id="cp-input-container">
+                <input 
+                  type="text" 
+                  id="codigo-postal" 
+                  name="codigo_postal" 
+                  class="form-control" 
+                  placeholder="Ejemplo: 12600" 
+                  maxlength="5"
+                  required 
+                  aria-required="true"
+                  aria-describedby="cp-hint cp-error"
+                  autocomplete="postal-code"
+                >
+                <span class="cp-input-status-icon" id="cp-icon" aria-hidden="true">✔</span>
+              </div>
+              <div id="cp-hint" class="form-hint">Escribe tu código postal (ej. 12600) para verificar al instante tu ruta asignada.</div>
+              <div id="cp-error" class="form-error" role="alert"></div>
+              <div id="cp-live-status" class="cp-live-status" role="region" aria-live="polite"></div>
+            </div>
+
+            <!-- Paso 2: Tipo de Cliente -->
+            <div class="form-group">
+              <fieldset style="border: none; padding: 0; margin: 0;">
+                <legend class="form-label">
+                  2. ¿Dónde necesitas el agua? <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+                </legend>
+                <div class="radio-tile-group">
+                  <label class="radio-tile-label">
+                    <input type="radio" name="tipo_cliente" value="Hogar / Particular" required>
+                    <span>🏠 Para mi hogar</span>
+                  </label>
+                  <label class="radio-tile-label">
+                    <input type="radio" name="tipo_cliente" value="Empresa / Negocio">
+                    <span>🏢 Para mi empresa</span>
+                  </label>
+                </div>
+                <div id="tipo-error" class="form-error" role="alert"></div>
+              </fieldset>
+            </div>
+
+            <!-- Paso 3: Teléfono Móvil -->
+            <div class="form-group">
+              <label for="telefono" class="form-label">
+                3. Teléfono móvil de contacto <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                class="form-control" 
+                placeholder="Ejemplo: 612345678" 
+                required 
+                aria-required="true"
+                aria-describedby="telefono-hint telefono-error"
+                autocomplete="tel"
+              >
+              <div id="telefono-hint" class="form-hint">Te llamaremos o escribiremos por WhatsApp para confirmar tu día de entrega y resolver dudas.</div>
+              <div id="telefono-error" class="form-error" role="alert"></div>
+            </div>
+
+            <!-- Paso 4: Consumo Mensual Aproximado -->
+            <div class="form-group">
+              <label for="consumo-aproximado" class="form-label">
+                4. Consumo mensual aproximado (orientativo)
+              </label>
+              <select 
+                id="consumo-aproximado" 
+                name="consumo_aproximado" 
+                class="form-control" 
+                aria-describedby="consumo-hint consumo-error"
+              >
+                <option value="3 a 4 garrafas/mes">Consumo familiar estándar (3 - 4 garrafas al mes)</option>
+                <option value="1 a 2 garrafas/mes">Consumo bajo (1 - 2 garrafas al mes / 1-2 personas)</option>
+                <option value="5 o más garrafas/mes">Consumo alto / Familia numerosa (5+ garrafas)</option>
+                <option value="Oficina pequeña (hasta 5 personas)">Oficina pequeña (hasta 5 empleados)</option>
+                <option value="Empresa mediana (más de 5 personas)">Empresa mediana o gran consumo (+5 empleados)</option>
+                <option value="Aún no lo sé, prefiero asesoramiento">Aún no lo sé, prefiero asesoramiento previo</option>
+              </select>
+              <div id="consumo-hint" class="form-hint">Sin pedidos mínimos obligatorios ni permanencias.</div>
+              <div id="consumo-error" class="form-error" role="alert"></div>
+            </div>
+
+            <p id="form-disclaimer" style="font-size: 0.8rem; color: #64748b; margin-bottom: 20px; line-height: 1.4;">
+              🔒 <strong>Aviso de privacidad local:</strong> Formulario simulado para comprobación técnica. No realiza ninguna llamada a servidores remotos ni guarda datos.
+            </p>
+
+            <button type="submit" id="btn-submit-form" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 14px;">
+              💧 Solicitar información y comprobar ruta
+            </button>
+
+            <!-- Acceso directo por WhatsApp cuando la ruta se valida -->
+            <div id="fast-track-container" style="display: none;">
+              <div class="fast-track-divider"><span>o si lo prefieres</span></div>
+              <button type="button" class="btn btn-whatsapp-fast" id="btn-fast-whatsapp">
+                <span>💬</span> Pedir directamente por WhatsApp con mi CP <strong id="fast-cp-text">12600</strong>
+              </button>
+            </div>
+          </form>
+
+          <!-- Pantalla de confirmación tras validar -->
+          <div id="form-feedback" class="form-feedback-modal" tabindex="-1" role="region" aria-live="polite">
+            <h3 class="form-feedback-title">
+              ✔ Simulación completada con éxito
+            </h3>
+            <div class="form-feedback-content">
+              <p>Los datos han superado las reglas de validación en tu navegador:</p>
+              <div class="datos-simulados" id="feedback-resumen"></div>
+              <p style="font-size: 0.85rem; color: #064e3b; margin-top: 8px;">
+                ℹ️ <em>En la web definitiva, el responsable comercial de AQUA ESTEC recibiría este aviso de inmediato por correo electrónico y se registraría el contacto para su seguimiento.</em>
+              </p>
+            </div>
+            <button type="button" id="btn-reiniciar-form" class="btn btn-outline" style="background: #fff;">
+              Volver a probar el formulario
+            </button>
+          </div>
+
+        </div>
+
+        <div class="box-marcador" style="margin-top: 32px;">
+          <div class="box-marcador-header">
+            <span>⏳ CANALES PENDIENTES DE CONFIRMAR</span>
+          </div>
+          <p>
+            <strong>WhatsApp y llamada telefónica:</strong> Permanecerán desactivados e identificados como pendientes hasta que AQUA ESTEC proporcione y autorice el número de teléfono público oficial.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 AQUA ESTEC. Prototipo técnico local. Enlazado a <code>127.0.0.1</code>.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

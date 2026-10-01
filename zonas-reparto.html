@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zonas de Reparto de Agua - AQUA ESTEC</title>
+  <meta name="description" content="Zonas de distribución y reparto de agua mineral de AQUA ESTEC. Prioridad local en Vall d’Uixó y comarcas de Castellón y Valencia.">
+  <link rel="stylesheet" href="css/estilos.css?v=2.3">
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <aside class="banner-prototipo" aria-label="Aviso de prototipo">
+    ⚙️ <strong>PROTOTIPO LOCAL DE EVALUACIÓN:</strong> La prioridad de servicio es Vall d’Uixó. Otras rutas están en proceso de validación.
+  </aside>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="contacto-rapido">
+        <span>Canales directos:</span>
+        <span class="badge-pendiente">⏳ WhatsApp: [Pendiente de confirmación]</span>
+        <span class="badge-pendiente">⏳ Teléfono: [Pendiente de confirmación]</span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--color-primary-light); font-weight: 700;">
+        📍 Cobertura prioritaria: Vall d’Uixó
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="AQUA ESTEC - Inicio">
+        <img src="assets/logo-aqua-estec.png" alt="AQUA ESTEC" style="height: 28px; width: auto; object-fit: contain; display: block;">
+        <span class="brand-tagline" style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase; border-left: 1px solid #cbd5e1; padding-left: 8px; margin-left: 2px;">Desde 1970</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-navegacion" aria-label="Abrir o cerrar menú de navegación">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+
+      <nav id="menu-navegacion" class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="hogares.html" class="nav-link">Hogares</a></li>
+          <li><a href="empresas.html" class="nav-link">Empresas</a></li>
+          <li><a href="aguas-formatos.html" class="nav-link">Aguas y formatos</a></li>
+          <li><a href="dispensadores.html" class="nav-link">Dispensadores</a></li>
+          <li><a href="zonas-reparto.html" class="nav-link active" aria-current="page">Zonas de reparto</a></li>
+          <li><a href="historia.html" class="nav-link">Nuestra historia</a></li>
+          <li><a href="pedir-agua.html" class="nav-link nav-cta">Pedir agua</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="section section-alt" style="padding-top: 36px; padding-bottom: 24px;">
+      <div class="container">
+        <span class="section-kicker">Distribución y logística</span>
+        <h1 class="section-title">Zonas de servicio y cobertura de reparto</h1>
+        <p class="section-subtitle">
+          Reparto ágil, frecuente y de proximidad, con centro neurálgico en Vall d’Uixó y extensión por comarcas de Castellón y Valencia.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          
+          <!-- Bloque Vall d'Uixó -->
+          <div class="card" style="border-left: 4px solid var(--color-primary-light);">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="font-size: 1.5rem;">⭐</span>
+              <h2 class="card-title" style="margin: 0;">Zona Prioritaria: Vall d’Uixó (12600)</h2>
+            </div>
+            <p class="card-desc">
+              Sede histórica y núcleo operativo de AQUA ESTEC. Ofrecemos el servicio más directo, rápido y continuo tanto para particulares como para empresas, comercios y talleres de la localidad.
+            </p>
+            <ul class="card-list">
+              <li>Repartos continuos a lo largo de la semana.</li>
+              <li>Atención prioritaria ante cualquier urgencia o reposición imprevista.</li>
+              <li>Trato directo de persona a persona.</li>
+            </ul>
+          </div>
+
+          <!-- Comprobador interactivo de CP -->
+          <div class="card">
+            <h2 class="card-title">Comprobar mi código postal</h2>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 16px;">
+              Introduce tu código postal para verificar de inmediato la cobertura en este prototipo.
+            </p>
+            <form id="form-check-cp" style="margin-bottom: 12px;">
+              <div style="display: flex; gap: 8px;">
+                <input 
+                  type="text" 
+                  id="input-zona-cp" 
+                  class="form-control" 
+                  placeholder="Ej. 12600" 
+                  maxlength="5" 
+                  required 
+                  aria-label="Código postal a comprobar"
+                  style="flex: 1;"
+                >
+                <button type="submit" class="btn btn-primary" style="white-space: nowrap;">
+                  Comprobar
+                </button>
+              </div>
+            </form>
+            <div id="result-check-cp" role="region" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; padding: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; margin-top: 32px; text-align: center;">
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 12px;">
+            Mapa de área de servicio y comarcas atendidas
+          </h2>
+          <img src="assets/mapa-cobertura-oficial.jpg" alt="Mapa del área de reparto de AQUA ESTEC: Vall d’Uixó, Nules, Moncófar, Castellón de la Plana, Sagunto" style="max-width: 100%; max-height: 480px; object-fit: contain; border-radius: var(--radius-sm);" loading="lazy">
+          <p class="img-caption" style="margin-top: 10px;">
+            📍 <strong>Mapa oficial de área de reparto:</strong> Núcleo de servicio en Vall d’Uixó (12600) y extensión a poblaciones de la Plana Baixa, Camp de Morvedre y comarcas limítrofes.
+          </p>
+        </div>
+
+        <!-- Marcador de poblaciones y rutas -->
+        <div class="box-marcador" style="margin-top: 32px;">
+          <div class="box-marcador-header">
+            <span>📍 POBLACIONES Y DÍAS DE RUTA EN REVISIÓN OPERATIVA</span>
+          </div>
+          <p>
+            La web pública de AQUA ESTEC comunica servicio en varias poblaciones de las provincias de Castellón y Valencia. Conforme al método del proyecto, las páginas locales específicas y los calendarios exactos de reparto no se publicarán de forma masiva hasta que la empresa confirme los días fijos de cada ruta.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <a href="pedir-agua.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 28px;">
+            Consultar ruta para mi dirección →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 AQUA ESTEC. Prototipo técnico local. Enlazado a <code>127.0.0.1</code>.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
