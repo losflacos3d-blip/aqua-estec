@@ -11,18 +11,18 @@ test('valida código postal sin atribuir cobertura', () => {
   for (const value of ['', '1234', '123456', '12a45', '<svg>']) assert.equal(validatePostcode(value), false);
 });
 
-test('detecta los cuatro campos vacíos y rechaza entradas inválidas', () => {
-  assert.deepEqual(Object.keys(validateContact()).sort(), ['client', 'consumption', 'phone', 'postcode']);
-  const errors = validateContact({ phone: '<script>', postcode: 'abcd', client: 'otro', consumption: '-5' });
-  assert.equal(Object.keys(errors).length, 4);
+test('detecta los campos obligatorios vacíos y rechaza entradas inválidas', () => {
+  assert.deepEqual(Object.keys(validateContact()).sort(), ['client', 'consumption', 'phone', 'postcode', 'privacy']);
+  const errors = validateContact({ phone: '<script>', postcode: 'abcd', client: 'otro', consumption: '-5', privacy: false });
+  assert.equal(Object.keys(errors).length, 5);
   for (const consumption of ['0', '-1', '1.5', '1e3', 'Infinity', '9007199254740992']) {
-    assert.ok(validateContact({ phone: '000000000', postcode: '00000', client: 'hogar', consumption }).consumption);
+    assert.ok(validateContact({ phone: '000000000', postcode: '00000', client: 'hogar', consumption, privacy: true }).consumption);
   }
 });
 
 test('acepta datos ficticios de hogar y empresa y consumo desconocido', () => {
-  assert.deepEqual(validateContact({ phone: '000 000 000', postcode: '00000', client: 'hogar', consumption: '30' }), {});
-  assert.deepEqual(validateContact({ phone: '+00 000 000 000', postcode: '00000', client: 'empresa', unknown: true }), {});
+  assert.deepEqual(validateContact({ phone: '000 000 000', postcode: '00000', client: 'hogar', consumption: '30', privacy: true }), {});
+  assert.deepEqual(validateContact({ phone: '+00 000 000 000', postcode: '00000', client: 'empresa', unknown: true, privacy: true }), {});
 });
 
 test('servidor: loopback, archivos públicos, bloqueo de envíos y rutas privadas', async () => {
@@ -93,7 +93,7 @@ test('todos los enlaces apuntan a secciones presentes o canales directos verific
   assert.doesNotMatch(html, /\bsrc="(?:https?:|\/\/)/i);
   for (const match of html.matchAll(/\bhref="([^"]+)"/g)) {
     const href = match[1];
-    if (href.startsWith('#') || href.startsWith('./') || href.startsWith('assets/') || href === 'styles.css') continue;
+    if (href.startsWith('#') || href.startsWith('./') || href.startsWith('assets/') || href.startsWith('legal/') || href === 'styles.css') continue;
     assert.ok(
       href.startsWith('tel:') || 
       href.startsWith('mailto:') || 

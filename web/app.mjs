@@ -201,10 +201,22 @@ document.addEventListener('DOMContentLoaded', () => {
         limpiarError(telefonoInput, telefonoError);
       }
 
-      // Campo Consumo Mensual Aproximado (Paso 4)
-      const consumoSelect = document.getElementById('consumo-aproximado');
-      const consumoError = document.getElementById('consumo-error');
-      const consumoValor = consumoSelect ? consumoSelect.value : '';
+      // Control de Seguridad Honeypot: Si el campo trampa tiene contenido, es un bot
+      const honeypot = document.getElementById('website_url');
+      if (honeypot && honeypot.value.trim().length > 0) {
+        // Bloqueo silencioso del ataque bot sin dar pistas
+        return;
+      }
+
+      // Campo Consentimiento RGPD (Casilla obligatoria)
+      const privacyCheck = document.getElementById('acepta-privacidad');
+      const privacyError = document.getElementById('privacy-error');
+      if (privacyCheck && !privacyCheck.checked) {
+        mostrarError(privacyCheck, privacyError, 'Debes leer y aceptar la Política de Privacidad para continuar.');
+        isValid = false;
+      } else {
+        limpiarError(privacyCheck, privacyError);
+      }
 
       // Si todo es válido, mostramos la pantalla de éxito simulada SIN enviar nada a ningún servidor
       if (isValid) {

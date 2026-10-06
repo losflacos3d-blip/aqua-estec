@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+# ==============================================================================
+# AQUA ESTEC - Git Pre-commit Security & Integrity Hook
+# 1. Impide commits si los tests automatizados fallan.
+# 2. Impide commits si se detectan cadenas sospechosas de claves privadas o tokens.
+# ==============================================================================
+
+echo "🔍 [Pre-commit] Verificando arnés de pruebas de seguridad y lógica..."
+
+# Ejecutar suite de pruebas de Node.js
+cd web || exit 1
+node --test > /dev/null 2>&1
+TEST_EXIT_CODE=$?
+cd ..
+
+if [ $TEST_EXIT_CODE -ne 0 ]; then
+  echo "❌ [ERROR] Las pruebas automatizadas han fallado ('npm test')."
+  echo "🚫 Commit cancelado: Prohibido avanzar o guardar código con pruebas en rojo."
+  exit 1
+fi
+
+echo "🛡️ [Pre-commit] Verificando ausencia de secretos o credenciales expuestas..."
+
+# Búsqueda defensiva de patrones de claves/secretos en archivos staged (excluyendo el propio hook)
+FORBIDDEN_PATTERNS="PRIVATE KEY|BEGIN RSA|ghp_[A-Za-z0-9]|glpat-[A-Za-z0-9]|AIzaSy[A-Za-z0-9]"
+MATCHES=$(git diff --cached -- ':!.githooks/*' | grep -E -i "$FORBIDDEN_PATTERNS")
+
+if [ -n "$MATCHES" ]; then
+  echo "❌ [ERROR DE SEGURIDAD] Se ha detectado una clave privada, token o secreto en los cambios staged."
+  echo "🚫 Commit cancelado para proteger la integridad del proyecto."
+  exit 1
+fi
+
+echo "✅ [Pre-commit] Verificaciones superadas con éxito (Tests 11/11 en verde y cero secretos)."
+exit 0

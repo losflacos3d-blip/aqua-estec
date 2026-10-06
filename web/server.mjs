@@ -27,6 +27,9 @@ const assets = new Map([
   ['/assets/marca-chovar.jpg', ['assets/marca-chovar.jpg', 'image/jpeg']],
   ['/assets/marca-bejis.png', ['assets/marca-bejis.png', 'image/png']],
   ['/assets/logo-aqua-estec.png', ['assets/logo-agua-estec.png', 'image/png']],
+  ['/legal/aviso-legal.html', ['legal/aviso-legal.html', 'text/html; charset=utf-8']],
+  ['/legal/privacidad.html', ['legal/privacidad.html', 'text/html; charset=utf-8']],
+  ['/legal/cookies.html', ['legal/cookies.html', 'text/html; charset=utf-8']],
 ]);
 
 export function createServer() {

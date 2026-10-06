@@ -2,13 +2,27 @@ export function validatePostcode(value) {
   return /^\d{5}$/.test(String(value).trim());
 }
 
-export function validateContact({ phone = '', postcode = '', client = '', consumption = '', unknown = false } = {}) {
+export function validateContact({ phone = '', postcode = '', client = '', consumption = '', unknown = false, privacy = false, website_url = '' } = {}) {
   const errors = {};
+  // 1. Honeypot Antispam: Si un bot rellena el campo trampa oculto
+  if (website_url && String(website_url).trim().length > 0) {
+    errors.spam = true;
+    return errors;
+  }
+  // 2. Consentimiento explícito RGPD / LOPDGDD
+  if (!privacy) {
+    errors.privacy = 'Debes leer y aceptar la Política de Privacidad para enviar tu consulta.';
+  }
   const normalizedPhone = String(phone).replace(/[\s()-]/g, '');
   if (!/^\+?\d{9,15}$/.test(normalizedPhone)) errors.phone = 'Escribe un teléfono de 9 a 15 cifras. Puedes incluir el prefijo internacional.';
   if (!validatePostcode(postcode)) errors.postcode = 'Escribe un código postal de 5 cifras.';
-  if (!['hogar', 'empresa'].includes(client)) errors.client = 'Elige hogar o empresa.';
-  if (!unknown && (!/^\d+$/.test(String(consumption)) || !Number.isSafeInteger(Number(consumption)) || Number(consumption) <= 0)) errors.consumption = 'Indica los litros aproximados al mes o marca «Todavía no lo sé».';
+  if (!['hogar', 'empresa', 'Hogar / Particular', 'Empresa / Negocio'].includes(client)) errors.client = 'Elige hogar o empresa.';
+  if (!unknown) {
+    const num = Number(consumption);
+    if (!/^\d+$/.test(String(consumption).trim()) || !Number.isSafeInteger(num) || num <= 0) {
+      errors.consumption = 'Indica los litros aproximados al mes o marca «Todavía no lo sé».';
+    }
+  }
   return errors;
 }
 
