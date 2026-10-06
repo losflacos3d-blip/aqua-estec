@@ -2,7 +2,7 @@
 
 ## Estado del Proyecto
 - **Fase**: Estructura perfecta (Agente en raíz vs Web completa en `web/`).
-- **Control de Versiones**: Repositorio Git inicializado en la raíz con tag `v1.0-prototipo-completo`.
+- **Control de Versiones**: Sincronizado en GitHub (`https://github.com/losflacos3d-blip/aqua-estec`) con tag `v1.0-prototipo-completo`.
 - **Plataforma**: Vanilla Web en `web/` con servidor seguro `web/server.mjs`.
 - **Datos Reales Integrados**: Teléfono oficial `630 359 472`, WhatsApp activo, email `aguaestec@hotmail.com`, sede `C/ Ribera d'Adobadors, 24, La Vall d'Uixó`, formatos oficiales `12,5L` y `18,9L`.
 - **Diseño & Features**: Fuente oficial en manantial, comprobador de ruta `12600`, mapa comarcal y homenaje 50 años (1970).
