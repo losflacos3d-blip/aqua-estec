@@ -1,0 +1,23 @@
+# Dependencias y entornos
+node_modules/
+.npm/
+
+# Logs y depuración
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Entorno y credenciales privadas
+.env
+.env.local
+.env.*.local
+
+# Temporales de sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp

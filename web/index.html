@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQUA ESTEC - Agua Mineral para Hogares y Empresas desde 1970</title>
+  <meta name="description" content="Prototipo local de la nueva web de AQUA ESTEC. Suministro y reparto de agua mineral a domicilio y oficinas en Vall d’Uixó y comarca.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Enlace accesible de salto al contenido -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Banner de aviso de prototipo local -->
+  <aside class="banner-prototipo" aria-label="Aviso de prototipo">
+    ⚙️ <strong>PROTOTIPO LOCAL DE EVALUACIÓN:</strong> Este sitio es una maqueta técnica funcional ejecutada únicamente en tu ordenador. Los formularios no envían datos y los elementos marcados están pendientes de confirmación oficial.
+  </aside>
+
+  <!-- Cabecera principal -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="contacto-rapido">
+        <span>Canales directos:</span>
+        <a href="https://wa.me/34630359472?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20el%20suministro%20de%20agua%20AQUA%20ESTEC" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;padding:2px 8px;border-radius:6px;font-weight:700;font-size:0.75rem;text-decoration:none;">
+          💬 WhatsApp: 630 359 472
+        </a>
+        <a href="tel:630359472" style="display:inline-flex;align-items:center;gap:4px;background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe;padding:2px 8px;border-radius:6px;font-weight:700;font-size:0.75rem;text-decoration:none;">
+          📞 Teléfono: 630 359 472
+        </a>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--color-primary-light); font-weight: 700;">
+        📍 Cobertura prioritaria: Vall d’Uixó (Sede central)
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <a href="#contenido-principal" class="brand" aria-label="AQUA ESTEC - Inicio">
+        <img src="assets/logo-aqua-estec.png" alt="AQUA ESTEC" style="height: 28px; width: auto; object-fit: contain; display: block;">
+        <span class="brand-tagline" style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: 700; text-transform: uppercase; border-left: 1px solid #cbd5e1; padding-left: 8px; margin-left: 2px;">Desde 1970</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-navegacion" aria-label="Abrir o cerrar menú de navegación">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+
+      <nav id="menu-navegacion" class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#contenido-principal" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="#seccion-hogares" class="nav-link">Hogares</a></li>
+          <li><a href="#seccion-empresas" class="nav-link">Empresas</a></li>
+          <li><a href="#seccion-aguas" class="nav-link">Aguas y formatos</a></li>
+          <li><a href="#seccion-dispensadores" class="nav-link">Dispensadores</a></li>
+          <li><a href="#seccion-zonas" class="nav-link">Zonas de reparto</a></li>
+          <li><a href="#seccion-historia" class="nav-link">Nuestra historia</a></li>
+          <li><a href="#seccion-formulario" class="nav-link nav-cta">Pedir agua</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main id="contenido-principal">
+
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🛡️ Empresa familiar activa desde 1970</span>
+          </div>
+          <h1 id="hero-title" class="hero-title">
+            Agua mineral de calidad directa a tu hogar u oficina
+          </h1>
+          <p class="hero-text">
+            Reparto cercano, puntual y sin cargar peso. Más de 50 años cuidando la hidratación de familias y centros de trabajo con aguas de manantial seleccionadas y dispensadores modernos.
+          </p>
+
+          <!-- Imagen completa en alta resolución optimizada para smartphones -->
+          <div class="hero-visual-mobile" aria-label="Fotografía del equipo oficial y manantial">
+            <img src="assets/hero-manantial-montaje.jpg" alt="Fuente dispensadora de agua y estantería en manantial natural" class="hero-mobile-img" loading="eager">
+            <div class="hero-mobile-caption">
+              <span>💧 Fuente oficial AQUA-ESTEC + estantería de almacenaje</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#seccion-formulario" class="btn btn-primary">
+              💧 Pedir agua o presupuesto
+            </a>
+            <a href="#seccion-zonas" class="btn btn-secondary">
+              📍 Comprobar mi zona
+            </a>
+          </div>
+          <div style="font-size: 0.84rem; color: #475569; margin-top: -16px; margin-bottom: 22px; font-weight: 500;">
+            ⚡ Respuesta rápida sin compromiso · Sin permanencias forzadas
+          </div>
+
+          <div class="hero-features">
+            <div class="hero-feature-item">✔ Fuentes de agua fría y caliente</div>
+            <div class="hero-feature-item">✔ Estanterías metálicas de almacenaje</div>
+            <div class="hero-feature-item">✔ Reparto programado periódico</div>
+          </div>
+        </div>
+
+        <div class="hero-equipment-col" aria-label="Fotografía del equipo oficial">
+          <div class="hero-photo-tag">
+            <span>💧 Fuente AQUA-ESTEC y estantería · Agua pura de manantial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DIFERENCIACIÓN: HOGARES Y EMPRESAS -->
+    <section class="section" aria-labelledby="sec-servicios-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">A tu medida</span>
+          <h2 id="sec-servicios-title" class="section-title">Soluciones adaptadas a cada necesidad</h2>
+          <p class="section-subtitle">
+            Tanto si buscas comodidad para tu familia como un servicio profesional continuo para tus empleados.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Tarjeta Hogares -->
+          <article class="card" id="seccion-hogares">
+            <div class="card-icon" aria-hidden="true">🏠</div>
+            <h3 class="card-title">Agua mineral para Hogares</h3>
+            <p class="card-desc">
+              Hidratación pura y equilibrada para beber, cafés y comidas familiares. Despídete de cargar paquetes pesados del súper y del exceso de dureza del agua de red en casa: disfruta del sabor auténtico del manantial directamente en tu domicilio.
+            </p>
+            <ul class="card-list">
+              <li>Reparto periódico adaptado al ritmo de tu familia.</li>
+              <li>Dispensadores compactos y prácticos de sobremesa o columna.</li>
+              <li>Aguas de mineralización débil ideales para toda la familia.</li>
+              <li>Comodidad de recogida de envases retornables en cada visita.</li>
+            </ul>
+            <a href="#seccion-formulario" class="btn btn-outline" style="margin-top: auto;">
+              Pedir para mi hogar →
+            </a>
+          </article>
+
+          <!-- Tarjeta Empresas -->
+          <article class="card" id="seccion-empresas">
+            <div class="card-icon" aria-hidden="true">🏢</div>
+            <h3 class="card-title">Suministro para Empresas y Oficinas</h3>
+            <p class="card-desc">
+              Mantén a tu equipo y clientes perfectamente hidratados con dispensadores modernos de agua fría y caliente, facturación unificada y stock continuo.
+            </p>
+            <ul class="card-list">
+              <li>Dispensadores de alto rendimiento con agua fría, natural y caliente.</li>
+              <li>Reposición programada sin que tengas que preocuparte de pedir.</li>
+              <li>Facturación mensual clara adaptada a la gestión de tu empresa.</li>
+            </ul>
+            <a href="#seccion-formulario" class="btn btn-outline" style="margin-top: auto;">
+              Pedir para mi empresa →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN NUESTRA HISTORIA (DESDE 1970) -->
+    <section class="section section-alt" id="seccion-historia" aria-labelledby="sec-historia-title">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-kicker">Confianza y tradición</span>
+            <h2 id="sec-historia-title" class="section-title">Más de 50 años llevando agua a tu mesa</h2>
+            <p style="margin-bottom: 16px; color: var(--color-text-muted);">
+              En 1970 nació AQUA ESTEC como un proyecto familiar basado en un compromiso innegociable: cercanía con cada cliente, puntualidad en cada entrega y la máxima pureza en el agua distribuida.
+            </p>
+            <p style="margin-bottom: 20px; color: var(--color-text-muted);">
+              A lo largo de más de cinco décadas hemos acompañado a generaciones de familias y a cientos de comercios y empresas locales, adaptándonos a los nuevos tiempos sin perder el trato personal de siempre.
+            </p>
+            <a href="#seccion-historia" class="btn btn-outline">
+              Conoce nuestra trayectoria →
+            </a>
+          </div>
+
+          <div>
+            <div style="background: #ffffff; padding: 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid #e2e8f0;">
+              <img src="assets/historia-fundadores-camiones-1970.jpg" alt="Fundadores de AQUA ESTEC junto a la primera flota de camiones de reparto Los Pujades (Castellón)" class="img-historia" loading="lazy">
+              <p class="img-caption">
+                📷 <strong>Fotografía histórica original de AQUA ESTEC:</strong> Los fundadores junto a la primera flota de camiones de reparto familiar ("Los Pujades") con matrícula histórica de Castellón.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN AGUAS Y FORMATOS -->
+    <section class="section" id="seccion-aguas" aria-labelledby="sec-aguas-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Calidad y pureza</span>
+          <h2 id="sec-aguas-title" class="section-title">Manantiales seleccionados</h2>
+          <p class="section-subtitle">
+            Distribuimos aguas de contrastada calidad mineral para satisfacer las preferencias de cada paladar y necesidad de salud.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="marca-card">
+            <span class="marca-badge">Manantial</span>
+            <img src="assets/marca-orotana.png" alt="Agua Mineral Natural Orotana" class="marca-logo-img" loading="lazy">
+            <h3 class="marca-title">Orotana</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Sierra de Espadán.</p>
+          </div>
+
+          <div class="marca-card">
+            <span class="marca-badge">Mineralización muy débil</span>
+            <img src="assets/marca-bezoya.png" alt="Agua Mineral Bezoya" class="marca-logo-img" loading="lazy">
+            <h3 class="marca-title">Bezoya</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Referente en pureza y ligereza.</p>
+          </div>
+
+          <div class="marca-card">
+            <span class="marca-badge">Manantial</span>
+            <img src="assets/marca-chovar.jpg" alt="Agua Mineral Chóvar" class="marca-logo-img" loading="lazy">
+            <h3 class="marca-title">Chóvar</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Sierra de Espadán.</p>
+          </div>
+
+          <div class="marca-card">
+            <span class="marca-badge">Manantial</span>
+            <img src="assets/marca-bejis.png" alt="Agua Mineral Bejís" class="marca-logo-img" loading="lazy">
+            <h3 class="marca-title">Bejís</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Manantial de montaña.</p>
+          </div>
+        </div>
+
+        <div class="box-marcador" style="margin-top: 28px; border-color:#0284c7; background:#f0f9ff; color:#0369a1;">
+          <div class="box-marcador-header" style="color:#0369a1;">
+            <span>💧 FORMATOS CONFIRMADOS Y GESTIÓN DE ENVASES</span>
+          </div>
+          <p style="color:#0f172a;">
+            <strong>Formatos de distribución:</strong> Botellones oficiales retornables de <strong>12,5 Litros</strong> y <strong>18,9 Litros</strong> con tapón higiénico hermético antiderrame.<br>
+            <strong>Servicio integral:</strong> Higienización y mantenimiento técnico periódico del dispensador incluido, sin cobro de fianzas abusivas y con recogida de envases vacíos en cada reposición.
+          </p>
+          <div style="margin-top: 10px;">
+            <a href="#seccion-formulario" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">
+              Solicitar propuesta de suministro personalizada →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DISPENSADORES -->
+    <section class="section section-alt" id="seccion-dispensadores" aria-labelledby="sec-dispensadores-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Comodidad y salud</span>
+          <h2 id="sec-dispensadores-title" class="section-title">Dispensadores para cualquier espacio</h2>
+          <p class="section-subtitle">
+            Equipos higiénicos, silenciosos y de bajo consumo energético para tener agua fría, natural o caliente al instante.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🏢</div>
+            <h3 class="card-title">Dispensador de Columna</h3>
+            <p class="card-desc">Ideal para empresas, despachos y oficinas con tránsito de personas. Gran capacidad, estabilidad y portavasos integrado.</p>
+            <span style="display:inline-block;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">Instalación y mantenimiento incluidos</span>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">🏠</div>
+            <h3 class="card-title">Dispensador de Sobremesa</h3>
+            <p class="card-desc">Diseño compacto para cocinas familiares y espacios reducidos sin renunciar a la comodidad de beber agua mineral fresca.</p>
+            <span style="display:inline-block;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">Sin obras ni instalaciones complejas</span>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">☕</div>
+            <h3 class="card-title">Función Doble Temperatura</h3>
+            <p class="card-desc">Agua fresca para beber al instante o agua caliente para infusiones, caldos y cafés sin esperas ni hervidores.</p>
+            <span style="display:inline-block;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">Termostato regulable de bajo consumo</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px;">
+          <a href="#seccion-formulario" class="btn btn-outline">
+            Ver sección completa de dispensadores →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN ZONAS DE REPARTO -->
+    <section class="section" id="seccion-zonas" aria-labelledby="sec-zonas-title">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-kicker">Cobertura geográfica</span>
+            <h2 id="sec-zonas-title" class="section-title">Reparto local: Vall d’Uixó y comarcas</h2>
+            <p style="margin-bottom: 14px; color: var(--color-text-muted);">
+              Nuestra base operativa y máxima prioridad comercial está en <strong>Vall d’Uixó (CP 12600)</strong>, donde prestamos un servicio intensivo y ágil.
+            </p>
+            <p style="margin-bottom: 20px; color: var(--color-text-muted);">
+              Asimismo, cubrimos diversas localidades de las provincias de Castellón y Valencia mediante rutas semanales programadas.
+            </p>
+            <a href="#seccion-zonas" class="btn btn-outline">
+              Consultar mapa y localidades de reparto →
+            </a>
+          </div>
+
+          <div>
+            <div style="background: #ffffff; padding: 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; margin-bottom: 16px;">
+              <img src="assets/mapa-cobertura-oficial.jpg" alt="Mapa oficial de cobertura y rutas comarcales de AQUA ESTEC (Vall d’Uixó, comarcas de Castellón y Valencia)" style="width: 100%; max-height: 260px; object-fit: cover; border-radius: var(--radius-sm);" loading="lazy">
+              <p class="img-caption">
+                📍 <strong>Mapa oficial de área de reparto:</strong> Cobertura principal en Vall d’Uixó y extensión por comarcas de Castellón y Valencia.
+              </p>
+            </div>
+            <div class="box-marcador" style="margin: 0; border-color:#0284c7; background:#f0f9ff; color:#0369a1;">
+              <div class="box-marcador-header" style="color:#0369a1;">
+                <span>📍 RUTAS Y FRECUENCIAS DE REPARTO VERIFICADAS</span>
+              </div>
+              <p style="color:#0f172a;">
+                <strong>Sede y reparto intensivo:</strong> La Vall d’Uixó (CP 12600) con servicio diario prioritario.<br>
+                <strong>Rutas comarcales fijas:</strong> Cobertura semanal continua en poblaciones de La Plana Baixa, Camp de Morvedre, Castellón y Valencia.<br>
+                <strong>Teléfono directo de logística:</strong> 630 359 472 para programar tu día de entrega.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN TESTIMONIOS Y CONFIANZA COMARCAL -->
+    <section class="section" aria-labelledby="sec-testimonios-title">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Trato directo y personal</span>
+          <h2 id="sec-testimonios-title" class="section-title">La confianza de más de 50 años a tu servicio</h2>
+          <p class="section-subtitle">
+            Vecinos y empresas de la comarca valoran la puntualidad, la cercanía y la comodidad de nuestro suministro continuado.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Opinión 1 -->
+          <article class="card">
+            <div style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 12px;" aria-label="Valoración: 5 de 5 estrellas">
+              ★★★★★
+            </div>
+            <p style="font-size: 0.95rem; color: var(--color-text); line-height: 1.6; font-style: italic; margin-bottom: 18px;">
+              “Una maravilla no tener que cargar con garrafas pesadas escaleras arriba. El repartidor es puntualísimo, avisa siempre antes y te deja el pedido dentro de la cocina. Servicio impecable.”
+            </p>
+            <div style="margin-top: auto; border-top: 1px solid #e2e8f0; padding-top: 14px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 700; font-size: 0.92rem; color: var(--color-primary-dark);">Familia M. P.</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Hogar en Vall d’Uixó</span>
+            </div>
+          </article>
+
+          <!-- Opinión 2 -->
+          <article class="card">
+            <div style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 12px;" aria-label="Valoración: 5 de 5 estrellas">
+              ★★★★★
+            </div>
+            <p style="font-size: 0.95rem; color: var(--color-text); line-height: 1.6; font-style: italic; margin-bottom: 18px;">
+              “Instalamos el dispensador en la oficina y el equipo está encantado: agua fría al momento en los meses de calor y agua caliente para infusiones. La reposición periódica es facilísima.”
+            </p>
+            <div style="margin-top: auto; border-top: 1px solid #e2e8f0; padding-top: 14px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 700; font-size: 0.92rem; color: var(--color-primary-dark);">Despacho Profesional</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Empresa comarcal</span>
+            </div>
+          </article>
+
+          <!-- Opinión 3 -->
+          <article class="card">
+            <div style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 12px;" aria-label="Valoración: 5 de 5 estrellas">
+              ★★★★★
+            </div>
+            <p style="font-size: 0.95rem; color: var(--color-text); line-height: 1.6; font-style: italic; margin-bottom: 18px;">
+              “Llevamos años consumiendo agua con AQUA ESTEC. Es una empresa de confianza de toda la vida, te atienden con una llamada y se nota el compromiso de un negocio familiar que cuida a sus clientes.”
+            </p>
+            <div style="margin-top: auto; border-top: 1px solid #e2e8f0; padding-top: 14px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 700; font-size: 0.92rem; color: var(--color-primary-dark);">Vicente S.</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Cliente habitual</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 22px; text-align: center;">
+          <span class="badge-pendiente">⏳ Reseñas y testimonios: Muestras de diseño basadas en la experiencia comarcal. Pendiente de aportación de reseñas oficiales por la empresa.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO LOCAL DE PEDIDO / CONTACTO -->
+    <section id="seccion-formulario" class="section section-alt" aria-labelledby="form-title">
+      <div class="container" style="max-width: 720px;">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Contacto sin compromiso</span>
+          <h2 id="form-title" class="section-title">Pide agua o consulta disponibilidad</h2>
+          <p class="section-subtitle">
+            Rellena estos 4 datos para comprobar tu zona y calcular una propuesta adaptada a tu consumo.
+          </p>
+        </div>
+
+        <div class="form-card">
+          <form id="form-pedir-agua" novalidate aria-describedby="form-disclaimer">
+            
+            <!-- Paso 1: Código Postal con verificación inmediata de ruta -->
+            <div class="form-group">
+              <label for="codigo-postal" class="form-label">
+                1. Código postal de entrega <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+              </label>
+              <div class="cp-input-wrap" id="cp-input-container">
+                <input 
+                  type="text" 
+                  id="codigo-postal" 
+                  name="codigo_postal" 
+                  class="form-control" 
+                  placeholder="Ejemplo: 12600" 
+                  maxlength="5"
+                  required 
+                  aria-required="true"
+                  aria-describedby="cp-hint cp-error"
+                  autocomplete="postal-code"
+                >
+                <span class="cp-input-status-icon" id="cp-icon" aria-hidden="true">✔</span>
+              </div>
+              <div id="cp-hint" class="form-hint">Escribe tu código postal (ej. 12600) para verificar al instante tu ruta asignada.</div>
+              <div id="cp-error" class="form-error" role="alert"></div>
+              <div id="cp-live-status" class="cp-live-status" role="region" aria-live="polite"></div>
+            </div>
+
+            <!-- Paso 2: Tipo de Cliente -->
+            <div class="form-group">
+              <fieldset style="border: none; padding: 0; margin: 0;">
+                <legend class="form-label">
+                  2. ¿Dónde necesitas el agua? <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+                </legend>
+                <div class="radio-tile-group">
+                  <label class="radio-tile-label">
+                    <input type="radio" name="tipo_cliente" value="Hogar / Particular" required>
+                    <span>🏠 Para mi hogar</span>
+                  </label>
+                  <label class="radio-tile-label">
+                    <input type="radio" name="tipo_cliente" value="Empresa / Negocio">
+                    <span>🏢 Para mi empresa</span>
+                  </label>
+                </div>
+                <div id="tipo-error" class="form-error" role="alert"></div>
+              </fieldset>
+            </div>
+
+            <!-- Paso 3: Teléfono Móvil -->
+            <div class="form-group">
+              <label for="telefono" class="form-label">
+                3. Teléfono móvil de contacto <span aria-hidden="true" style="color: var(--color-error-text);">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                class="form-control" 
+                placeholder="Ejemplo: 612345678" 
+                required 
+                aria-required="true"
+                aria-describedby="telefono-hint telefono-error"
+                autocomplete="tel"
+              >
+              <div id="telefono-hint" class="form-hint">Te llamaremos o escribiremos por WhatsApp para confirmar los detalles de reparto.</div>
+              <div id="telefono-error" class="form-error" role="alert"></div>
+            </div>
+
+            <!-- Paso 4: Consumo Mensual Aproximado -->
+            <div class="form-group">
+              <label for="consumo-aproximado" class="form-label">
+                4. Consumo mensual aproximado (orientativo)
+              </label>
+              <select 
+                id="consumo-aproximado" 
+                name="consumo_aproximado" 
+                class="form-control" 
+                aria-describedby="consumo-hint consumo-error"
+              >
+                <option value="3 a 4 garrafas/mes">Consumo familiar estándar (3 - 4 garrafas al mes)</option>
+                <option value="1 a 2 garrafas/mes">Consumo bajo (1 - 2 garrafas al mes / 1-2 personas)</option>
+                <option value="5 o más garrafas/mes">Consumo alto / Familia numerosa (5+ garrafas)</option>
+                <option value="Oficina pequeña (hasta 5 personas)">Oficina pequeña (hasta 5 empleados)</option>
+                <option value="Empresa mediana (más de 5 personas)">Empresa mediana o gran consumo (+5 empleados)</option>
+                <option value="Aún no lo sé, prefiero asesoramiento">Aún no lo sé, prefiero que me asesoren</option>
+              </select>
+              <div id="consumo-hint" class="form-hint">Sin pedidos mínimos obligatorios ni permanencias.</div>
+              <div id="consumo-error" class="form-error" role="alert"></div>
+            </div>
+
+            <p id="form-disclaimer" style="font-size: 0.8rem; color: #64748b; margin-bottom: 20px; line-height: 1.4;">
+              🔒 <strong>Privacidad del prototipo:</strong> Este formulario se ejecuta de forma estrictamente local en tu navegador. Los datos introducidos no se transmitirán ni se almacenarán en ninguna base de datos ni servicio de terceros.
+            </p>
+
+            <button type="submit" id="btn-submit-form" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 14px;">
+              💧 Solicitar información y comprobar ruta
+            </button>
+
+            <!-- Acceso directo por WhatsApp cuando la ruta se valida -->
+            <div id="fast-track-container" style="display: none;">
+              <div class="fast-track-divider"><span>o si lo prefieres</span></div>
+              <button type="button" class="btn btn-whatsapp-fast" id="btn-fast-whatsapp">
+                <span>💬</span> Pedir directamente por WhatsApp con mi CP <strong id="fast-cp-text">12600</strong>
+              </button>
+            </div>
+          </form>
+
+          <!-- Pantalla de confirmación simulada tras validar -->
+          <div id="form-feedback" class="form-feedback-modal" tabindex="-1" role="region" aria-live="polite">
+            <h3 class="form-feedback-title">
+              ✔ Simulación completada con éxito
+            </h3>
+            <div class="form-feedback-content">
+              <p>El formulario ha validado correctamente todos los campos obligatorios.</p>
+              <div class="datos-simulados" id="feedback-resumen">
+                <!-- Se rellena dinámicamente con app.js -->
+              </div>
+              <p style="font-size: 0.85rem; color: #064e3b; margin-top: 8px;">
+                ℹ️ <em>En la versión de producción aprobada, esta solicitud generaría un aviso seguro por correo electrónico y el registro interno acordado para el seguimiento comercial.</em>
+              </p>
+            </div>
+            <button type="button" id="btn-reiniciar-form" class="btn btn-outline" style="background: #fff;">
+              Probar el formulario de nuevo
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px;">AQUA ESTEC</div>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 14px;">
+            Empresa familiar de distribución de agua mineral a hogares y empresas. Activa desde 1970. Tradición, confianza y servicio de proximidad.
+          </p>
+          <div class="footer-legal-box">
+            ⚙️ <strong>Modo prototipo local:</strong> Enlazado exclusivamente a <code>127.0.0.1</code>. Sin conexión a internet requerida.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="#contenido-principal">Inicio</a></li>
+            <li><a href="#seccion-hogares">Hogares</a></li>
+            <li><a href="#seccion-empresas">Empresas</a></li>
+            <li><a href="#seccion-aguas">Aguas y formatos</a></li>
+            <li><a href="#seccion-dispensadores">Dispensadores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Información</h3>
+          <ul class="footer-links">
+            <li><a href="#seccion-zonas">Zonas de reparto</a></li>
+            <li><a href="#seccion-historia">Nuestra historia</a></li>
+            <li><a href="#seccion-formulario">Pedir agua</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Sede y datos de contacto</h3>
+          <div style="color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;">
+            <p><strong>Agua-Estec S.L.</strong></p>
+            <p>📍 C/ Ribera d'Adobadors, 24<br>12600 La Vall d'Uixó (Castellón)</p>
+            <p style="margin-top:6px;">📞 Teléfono: <a href="tel:630359472" style="color:#38bdf8;text-decoration:underline;">630 359 472</a></p>
+            <p>✉️ Email: <a href="mailto:aguaestec@hotmail.com" style="color:#38bdf8;text-decoration:underline;">aguaestec@hotmail.com</a></p>
+            <p style="margin-top:8px;font-size:0.75rem;color:#94a3b8;">Tratamiento de datos conforme al RGPD para gestión de pedidos y logística.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 AQUA ESTEC. Prototipo técnico local para evaluación de diseño y experiencia de usuario.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante accesible de WhatsApp directo -->
+  <aside aria-label="Contacto directo por WhatsApp">
+    <a href="https://wa.me/34630359472?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20el%20suministro%20de%20agua%20AQUA%20ESTEC" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="btn-floating-whatsapp" aria-label="Contactar por WhatsApp al 630 359 472" style="text-decoration:none;">
+      <span aria-hidden="true" style="font-size: 1.25rem;">💬</span>
+      <span>WhatsApp</span>
+    </a>
+  </aside>
+
+  <script src="app.mjs"></script>
+</body>
+</html>

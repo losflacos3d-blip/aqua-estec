@@ -1,0 +1,9 @@
+{
+  "name": "aqua-estec-prototipo-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Prototipo local sin dependencias externas ni envíos de formularios.",
+  "scripts": { "start": "node server.mjs", "test": "node --test tests/*.test.mjs" },
+  "engines": { "node": ">=22" }
+}
